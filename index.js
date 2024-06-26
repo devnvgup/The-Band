@@ -29,4 +29,17 @@ function changeBackGround() {
     des.textContent = contentImg[currentIndex].des
 }
 
-setInterval(changeBackGround,2000)
+function setNameAndAvatar() {
+    const contentMember = document.querySelector(".member-list")
+    for (let i = 0; i < 3; i++) {
+        contentMember.innerHTML += `
+        <div class="member-item">
+            <p class="member-name">Name</p>
+            <img src="./assets/img/band/bandmember.jpg" alt="" class="member-img">
+        </div>`
+    }
+}
+
+setInterval(changeBackGround, 2000)
+setNameAndAvatar()
+
